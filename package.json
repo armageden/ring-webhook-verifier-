@@ -1,0 +1,34 @@
+{
+  "name": "ring-webhook-verifier",
+  "version": "1.0.0",
+  "description": "Zero-dependency Node.js utility to verify raw-body HMAC-SHA256 signatures for Ring Partner API webhooks without JSON whitespace or key-ordering corruption.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test dist/test/verifier.test.js || echo 'Run npm run build first'",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ring",
+    "ring-api",
+    "webhook",
+    "hmac",
+    "sha256",
+    "security",
+    "signature-verification",
+    "aws-lambda"
+  ],
+  "author": "farhan",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3"
+  }
+}
